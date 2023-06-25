@@ -49,7 +49,7 @@ header {
 }
 
 /* Logo */
-#logo {
+.logo {
     color: var(--navyblue);
     text-transform: uppercase;
     font-family: var(--logo-font);
