@@ -77,8 +77,6 @@ address {
 
 .menu-item:hover,
 .address-item:hover,
-/* .menu-item:active,
-.address-item:active, */
 .menu-item:focus,
 .address-item:focus {
     color: var(--ocean);
@@ -86,18 +84,27 @@ address {
 
 /* Main */
 
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    color: var(--navyblue);
+    text-align: center;
+    text-transform: capitalize;
+}
+
 /* Order Service Section */
 
 .order-service {
-    background: var(--navyblue);
+    background-color: var(--navyblue);
 }
 
-.order-service h1 {
+.order-service-title {
     color: var(--white);
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.07;
-    letter-spacing: 1.12px;
     text-align: center;
 }
 
@@ -105,9 +112,10 @@ address {
 .order-service-button {
     background-color: var(--iris);
     color: var(--white);
+    font-weight: 500;
 }
 
-.order-service-button:active,
+.order-service-button:focus,
 .order-service-button:hover {
     background-color: var(--ocean);
 }
@@ -115,49 +123,46 @@ address {
 
 /* Features Section */
 
-
-h2 {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    line-height: 1.11;
-    color: var(--navyblue);
-    /* Maybe not yet needed */
-    text-align: center;
-    text-transform: capitalize;
-}
-
-h3 {
+.item-title {
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: 0.4px;
     color: var(--navyblue);
+    line-height: 1.2;
+}
+
+/* Our Team Section */
+.team {
+    background-color: var(--cloud);
+}
+
+.team-member {
+    background-color: var(--white);
 }
 
 /* Protfolio Page */
 
-.portfolio-filter button {
+
+
+.filter-button {
     background-color: var(--cloud);
     color: var(--iris);
     font-weight: 500;
     border: 1px solid var(--cornflower);
 }
 
-.portfolio-filter button:active,
-.portfolio-filter button:hover {
+.filter-button:focus,
+.filter-button:hover {
     color: var(--white, #FFF);
-    background: var(--ocean);
+    background-color: var(--ocean);
 }
-
-.portfolio-content {}
 
 /* Footer */
 
-footer {
+.footer {
     background-color: var(--navyblue);
     color: var(--cloud);
 }
 
-footer #logo {
+.footer .logo-studio {
     color: var(--cloud);
 }
