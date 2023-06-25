@@ -15,22 +15,23 @@
 
 /* Body */
 body {
+    background-color: var(--white);
     color: var(--slate);
     font-size: 16px;
     font-family: var(--main-font);
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     font-weight: 400;
 }
 
 /* All links */
-a {
-    text-decoration-line: none;
+.link {
+    text-decoration: none;
 }
 
-/* All list items */
-ul li {
-    list-style-type: none;
+/* All lists */
+.list {
+    list-style: none;
 }
 
 button {
@@ -44,38 +45,42 @@ button {
 
 /* Header */
 
-header {
-    background-color: var(--white);
-}
-
 /* Logo */
 .logo {
-    color: var(--navyblue);
+    color: var(--iris);
     text-transform: uppercase;
     font-family: var(--logo-font);
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 0.54px;
-    line-height: 21px;
+    line-height: 1.17;
+}
+
+.logo-studio {
+    color: var(--navyblue);
 }
 
 /* Menu */
-.menu a {
+.menu-item {
     color: var(--navyblue);
     font-weight: 500;
 }
 
 /* Address */
-.address a {
+address {
+    font-style: normal;
+}
+
+.address-item {
     color: var(--slate);
 }
 
-.menu a:hover,
-.address a:hover,
-.menu a:active,
-.address a:active,
-.menu a:focus,
-.address a:focus {
+.menu-item:hover,
+.address-item:hover,
+/* .menu-item:active,
+.address-item:active, */
+.menu-item:focus,
+.address-item:focus {
     color: var(--ocean);
 }
 
@@ -91,7 +96,7 @@ header {
     color: var(--white);
     font-size: 56px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 1.07;
     letter-spacing: 1.12px;
     text-align: center;
 }
@@ -115,7 +120,7 @@ h2 {
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.72px;
-    line-height: 40px;
+    line-height: 1.11;
     color: var(--navyblue);
     /* Maybe not yet needed */
     text-align: center;
@@ -141,9 +146,7 @@ h3 {
 .portfolio-filter button:active,
 .portfolio-filter button:hover {
     color: var(--white, #FFF);
-    border-radius: 4px;
     background: var(--ocean);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .portfolio-content {}
