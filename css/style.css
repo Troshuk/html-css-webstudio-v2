@@ -1,0 +1,170 @@
+:root {
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --logo-font: 'Raleway', sans-serif;
+
+    /* Colors */
+    --iris: #4D5AE5;
+    --ocean: #404BBF;
+    --navyblue: #2E2F42;
+    --slate: #434455;
+    --cornflower: #E7E9FC;
+    --cloud: #F4F4FD;
+    --white: #FFFFFF;
+}
+
+/* Body */
+body {
+    color: var(--slate);
+    font-size: 16px;
+    font-family: var(--main-font);
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    font-weight: 400;
+}
+
+/* All links */
+a {
+    text-decoration-line: none;
+}
+
+/* All list items */
+ul li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+}
+
+/* Header */
+
+header {
+    background-color: var(--white);
+}
+
+/* Logo */
+#logo {
+    color: var(--navyblue);
+    text-transform: uppercase;
+    font-family: var(--logo-font);
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    line-height: 21px;
+}
+
+header a {
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    font-size: 16px;
+}
+
+/* Menu */
+.menu a {
+    color: var(--navyblue);
+    font-weight: 500;
+}
+
+/* Address */
+.address a {
+    color: var(--slate);
+}
+
+.menu a:hover,
+.address a:hover,
+.menu a:active,
+.address a:active,
+.menu a:focus,
+.address a:focus {
+    color: var(--ocean);
+}
+
+/* Main */
+
+/* Order Service Section */
+
+.order-service {
+    background: var(--navyblue);
+}
+
+.order-service h1 {
+    color: var(--white);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 1.12px;
+    text-align: center;
+}
+
+/* Order Service button */
+.order-service-button {
+    background-color: var(--iris);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: medium;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+}
+
+.order-service-button:active,
+.order-service-button:hover {
+    background-color: var(--ocean);
+}
+
+
+/* Features Section */
+
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    line-height: 40px;
+    color: var(--navyblue);
+    /* Maybe not yet needed */
+    text-align: center;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: var(--navyblue);
+}
+
+/* Protfolio Page */
+
+.portfolio-filter button {
+    background-color: var(--cloud);
+    color: var(--iris);
+    font-weight: 500;
+    letter-spacing: 0.64px;
+    border: 1px solid var(--cornflower);
+}
+
+.portfolio-filter button:active,
+.portfolio-filter button:hover {
+    color: var(--white, #FFF);
+    border-radius: 4px;
+    background: var(--ocean);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+.portfolio-content {}
+
+/* Footer */
+
+footer {
+    background-color: var(--navyblue);
+    color: var(--cloud);
+}
+
+footer #logo {
+    color: var(--cloud);
+}
