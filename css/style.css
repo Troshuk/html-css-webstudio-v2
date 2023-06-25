@@ -144,7 +144,6 @@ address {
 /* Protfolio Page */
 
 
-
 .filter-button {
     background-color: var(--cloud);
     color: var(--iris);
@@ -156,6 +155,10 @@ address {
 .filter-button:hover {
     color: var(--white, #FFF);
     background-color: var(--ocean);
+}
+
+.portfolio-filter .item-description {
+    color: var(--slate);
 }
 
 /* Footer */
