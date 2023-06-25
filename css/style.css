@@ -106,6 +106,7 @@ address {
     font-weight: 500;
     line-height: 1.07;
     text-align: center;
+    letter-spacing: 0.02em
 }
 
 /* Order Service button */
@@ -128,6 +129,7 @@ address {
     font-weight: 500;
     color: var(--navyblue);
     line-height: 1.2;
+    letter-spacing: 0.02em
 }
 
 /* Our Team Section */
