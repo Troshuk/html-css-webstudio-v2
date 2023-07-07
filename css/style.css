@@ -11,6 +11,10 @@
     --cornflower: #E7E9FC;
     --cloud: #F4F4FD;
     --white: #FFFFFF;
+
+    /* Container configurations */
+    --container-width: 1128px;
+    --container-side-padding: 15px;
 }
 
 /* Body */
@@ -24,14 +28,27 @@ body {
     font-weight: 400;
 }
 
-/* All links */
-.link {
-    text-decoration: none;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/* All lists */
-.list {
-    list-style: none;
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    /* To remove default bottom gap of 4px */
+    display: block;
 }
 
 button {
@@ -41,6 +58,27 @@ button {
     line-height: inherit;
     cursor: pointer;
     letter-spacing: 0.64px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.container {
+    /* use 100% of the page id the width is smaller then max width */
+    width: 100%;
+    /* content width + 15px for each side (left and right) */
+    max-width: calc(var(--container-width) + var(--container-side-padding) * 2);
+    padding-left: var(--container-side-padding);
+    padding-right: var(--container-side-padding);
+    /* Center content inside the container */
+    margin: 0 auto;
+    /* Temporary border ouline */
+    /* outline: 2px solid red; */
 }
 
 .section-title {
@@ -53,7 +91,41 @@ button {
     text-transform: capitalize;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* ------------------------ Header ------------------------ */
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--cornflower);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    /* Make menu navigation to take the most of the space */
+    flex-grow: 1;
+    gap: 76px;
+}
 
 /* Logo */
 .logo {
@@ -70,25 +142,34 @@ button {
     color: var(--navyblue);
 }
 
-/* Menu */
+/* Menu items */
+.menu-items {
+    display: flex;
+    gap: 40px;
+}
+
 .menu-item {
     color: var(--navyblue);
     font-weight: 500;
 }
 
 /* Address */
-address {
+.address {
     font-style: normal;
+}
+
+.address-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .address-item {
     color: var(--slate);
 }
 
-.menu-item:hover,
-.address-item:hover,
-.menu-item:focus,
-.address-item:focus {
+.menu-item:is(:hover, :focus),
+.address-item:is(:hover, :focus) {
     color: var(--ocean);
 }
 
@@ -96,6 +177,15 @@ address {
 
 .order-service {
     background-color: var(--navyblue);
+    padding-top: 188px;
+    padding-bottom: 188px;
+}
+
+.order-service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
 }
 
 .order-service-title {
@@ -104,7 +194,8 @@ address {
     font-weight: 500;
     line-height: 1.07;
     text-align: center;
-    letter-spacing: 0.02em
+    letter-spacing: 0.02em;
+    width: 496px;
 }
 
 /* Order Service button */
@@ -112,49 +203,134 @@ address {
     background-color: var(--iris);
     color: var(--white);
     font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.order-service-button:focus,
-.order-service-button:hover {
+.order-service-button::is(:hover, :focus) {
     background-color: var(--ocean);
 }
 
 /* ------------------------ Features Section ------------------------ */
+
+.features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.features-container {}
+
+.features-items {
+    display: flex;
+    gap: 24px;
+}
 
 .item-title {
     font-size: 20px;
     font-weight: 500;
     color: var(--navyblue);
     line-height: 1.2;
-    letter-spacing: 0.02em
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
+
+.features-item {
+    /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+    width: calc((100% - 24px * 3) / 4);
+}
+
+/* ------------------------ Services Section ------------------------ */
+
+.services {
+    padding-bottom: 120px;
+}
+
+.services-container {}
+
+.services-items {
+    margin-top: 72px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.services-item {}
 
 /* ------------------------ Our Team Section ------------------------ */
 
 .team {
     background-color: var(--cloud);
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.team-container {}
+
+.team-items {
+    margin-top: 72px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .team-member {
     background-color: var(--white);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-member-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
 }
 
 /* !------------------------ Protfolio Page ------------------------ */
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.portfolio-buttons {
+    padding-bottom: 72px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
 
 .filter-button {
     background-color: var(--cloud);
     color: var(--iris);
     font-weight: 500;
     border: 1px solid var(--cornflower);
+    padding: 12px 24px;
+    border-radius: 4px;
 }
 
-.filter-button:focus,
-.filter-button:hover {
-    color: var(--white, #FFF);
+.filter-button:is(:hover, :focus) {
+    color: var(--white);
     background-color: var(--ocean);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
-.portfolio-filter .item-description {
+.portfolio-items {
+    display: flex;
+    gap: 48px 24px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: calc((100% - 24px * 2) / 3);
+    border: 1px solid var(--cornflower);
+}
+
+.protfolio-card-info {
+    padding: 32px 16px;
+}
+
+.portfolio .item-description {
     color: var(--slate);
 }
 
@@ -163,8 +339,15 @@ address {
 .footer {
     background-color: var(--navyblue);
     color: var(--cloud);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer .logo-studio {
     color: var(--cloud);
+}
+
+.footer-description {
+    padding-top: 8px;
+    width: 264px;
 }
