@@ -421,7 +421,9 @@ button {
     justify-content: center;
     border-radius: 4px;
     border: 1px solid currentColor;
-    transition: color var(--transition-time) var(--transition-function);
+    transition:
+        border-color var(--transition-time) var(--transition-function),
+        color var(--transition-time) var(--transition-function);
 }
 
 .customer-link:is(:hover, :focus) {
@@ -526,11 +528,9 @@ button {
     border: 1px solid var(--cornflower);
     padding: 12px 24px;
     border-radius: 4px;
-    transition:
-        box-shadow var(--transition-time) var(--transition-function),
-        color var(--transition-time) var(--transition-function),
-        background-color var(--transition-time) var(--transition-function),
-        border var(--transition-time) var(--transition-function);
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: var(--transition-time);
+    transition-timing-function: var(--transition-function);
 }
 
 .filter-button:is(:hover, :focus) {
@@ -540,7 +540,7 @@ button {
         0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 2px 1px 0px rgba(0, 0, 0, 0.08),
         0px 3px 1px 0px rgba(0, 0, 0, 0.10);
-    border: 1px solid transparent;
+    border-color: transparent;
 }
 
 .portfolio-items {
