@@ -74,6 +74,11 @@ button {
     padding: 0;
 }
 
+input {
+    font-family: inherit;
+    outline: none;
+}
+
 .link {
     text-decoration: none;
 }
@@ -463,6 +468,7 @@ button {
         0px 1px 3px 0px rgba(var(--rgba-balck), 0.12),
         0px 1px 1px 0px rgba(var(--rgba-balck), 0.14);
     transition: transform var(--transition-time) var(--transition-function);
+    padding: 72px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -507,6 +513,118 @@ button {
     visibility: hidden;
     /* Disable interaction */
     pointer-events: none;
+}
+
+.order-form {}
+
+.order-form-title {
+    margin-bottom: 16px;
+    color: var(--navyblue);
+    text-align: center;
+    font-weight: 500;
+}
+
+.order-input-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.order-label {
+    display: inline-block;
+    color: var(--lightslate);
+    font-size: 12px;
+    letter-spacing: 0.04;
+    margin-bottom: 4px;
+}
+
+.order-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(var(--rgba-navyblue), 0.40);
+    padding-left: 38px;
+}
+
+.order-input::placeholder {
+    color: rgba(var(--rgba-navyblue), 0.40);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.order-input:focus {
+    border: 1px solid var(--iris);
+}
+
+.order-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.order-input:focus+.order-icon {
+    fill: var(--iris);
+}
+
+.order-comment {
+    padding: 8px 16px;
+    height: 120px;
+    resize: none;
+    outline: none;
+    margin-bottom: 16px;
+}
+
+.order-checkbox {
+    width: 24px;
+    height: 24px;
+}
+
+.order-terms {
+    color: var(--lightslate);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--lightslate, #8E8F99);
+}
+
+.order-checkbox-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    border: 1px solid rgba(var(--rgba-navyblue), 0.40);
+    fill: transparent;
+    margin-right: 8px;
+}
+
+.order-checkbox:checked+.order-checkbox-check {
+    background-color: var(--ocean);
+    fill: var(--cloud);
+}
+
+.order-terms-link {
+    margin-left: 3px;
+    color: var(--iris);
+    line-height: 1.34;
+}
+
+.order-submit {
+    display: block;
+    width: 169px;
+    margin: 24px auto 0;
+    padding: 16px 32px;
+    border-radius: 4px;
+    background: var(--iris);
+    box-shadow: 0px 4px 4px 0px rgba(var(--rgba-balck), 0.15);
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 0.04em;
 }
 
 /* !------------------------ Protfolio Page ------------------------ */
@@ -668,4 +786,73 @@ button {
 
 .footer-social-icon {
     fill: var(--cloud);
+}
+
+/* Subscribe form */
+
+.subscribe-form {
+    margin-left: 80px;
+
+}
+
+.subscribe-email-wrapper {
+    display: flex;
+    margin-top: 16px;
+}
+
+.subscribe-email-label {
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.subscribe-email-input {
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(var(--rgba-balck), 0.15);
+    padding: 8px 16px;
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    transition: border-color var(--transition-time) var(--transition-function);
+    color: var(--white);
+    font-size: 15px;
+}
+
+.subscribe-email-input::placeholder {
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    transition: opacity var(--transition-time) var(--transition-function);
+}
+
+.subscribe-email-input:is(:hover, :focus) {
+    border-color: var(--iris);
+}
+
+.subscribe-email-input:focus::placeholder {
+    opacity: 0;
+}
+
+.subscribe-submit {
+    /* height: 40px; */
+    /* width: 165px; */
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-left: 24px;
+    border-radius: 4px;
+    background-color: var(--iris);
+    padding: 8px 24px;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background-color var(--transition-time) var(--transition-function);
+}
+
+.subscribe-submit:is(:hover, :focus) {
+    background-color: var(--ocean);
+}
+
+.subscribe-submit-icon {
+    fill: var(--white);
 }
