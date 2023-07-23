@@ -555,7 +555,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer>
       <div class="footer-container container">
         <div class="footer-info">
           <a href="./index.html" class="logo link">
@@ -627,12 +627,12 @@
 
         <div class="subscribe-container">
           <p class="subscribe-title">Subscribe</p>
+
           <form name="subscribe" class="subscribe-form">
-            <label for="subscribe-email" class="subscribe-email-label">
+            <label class="subscribe-email-label">
               <input
                 type="email"
                 name="subscribe-email"
-                id="subscribe-email"
                 placeholder="E-mail"
                 class="subscribe-email-input"
                 minlength="5"
@@ -640,6 +640,7 @@
                 required
               />
             </label>
+
             <button type="submit" class="subscribe-submit">
               Subscribe
               <svg class="subscribe-submit-icon" width="24" height="24">
@@ -659,77 +660,92 @@
           </svg>
         </button>
 
-        <form name="order" class="order-form">
-          <p class="order-form-title">
-            Leave your contacts and we will call you back
-          </p>
+        <p class="order-form-title">
+          Leave your contacts and we will call you back
+        </p>
 
-          <label for="order-name" class="order-label">Name</label>
-          <div class="order-input-wrapper">
-            <input
-              type="text"
-              name="name"
-              id="order-name"
-              class="order-input"
-              required
-            />
-            <svg class="order-icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-          </div>
+        <form>
+          <div class="order-field-wrapper">
+            <label for="user-name" class="order-label">Name</label>
 
-          <label for="order-phone" class="order-label">Phone</label>
-          <div class="order-input-wrapper">
-            <input
-              type="tel"
-              name="phone"
-              id="order-phone"
-              class="order-input"
-              minlength="6"
-              maxlength="15"
-              pattern="^\+?[1-9]\d{1,14}$"
-              required
-            />
-            <svg class="order-icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-          </div>
-
-          <label for="order-email" class="order-label">Email</label>
-          <div class="order-input-wrapper">
-            <input
-              type="email"
-              name="email"
-              id="order-email"
-              class="order-input"
-              minlength="5"
-              maxlength="35"
-            />
-            <svg class="order-icon" width="18" height="18">
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
-          </div>
-
-          <label for="order-comment" class="order-label">Comment</label>
-          <textarea
-            name="comment"
-            id="order-comment"
-            class="order-input order-comment"
-            placeholder="Text input"
-            minlength="3"
-            maxlength="255"
-            required
-          ></textarea>
-
-          <div class="order-checkbox-wrap">
-            <label for="terms" class="order-terms">
+            <div class="order-input-wrapper">
               <input
-                type="checkbox"
-                name="terms"
-                id="terms"
-                class="order-checkbox visually-hidden"
+                type="text"
+                name="name"
+                id="user-name"
+                class="order-input"
                 required
               />
+
+              <svg class="order-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="order-field-wrapper">
+            <label for="user-phone" class="order-label">Phone</label>
+
+            <div class="order-input-wrapper">
+              <input
+                type="tel"
+                name="phone"
+                id="user-phone"
+                class="order-input"
+                minlength="6"
+                maxlength="15"
+                pattern="^\+?[1-9]\d{1,14}$"
+                required
+              />
+
+              <svg class="order-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="order-field-wrapper">
+            <label for="user-email" class="order-label">Email</label>
+
+            <div class="order-input-wrapper">
+              <input
+                type="email"
+                name="email"
+                id="user-email"
+                class="order-input"
+                minlength="5"
+                maxlength="35"
+              />
+
+              <svg class="order-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="order-comment-field-wrapper">
+            <label for="user-comment" class="order-label">Comment</label>
+            <textarea
+              name="comment"
+              id="user-comment"
+              class="order-input order-comment"
+              placeholder="Text input"
+              minlength="3"
+              maxlength="255"
+              required
+            ></textarea>
+          </div>
+
+          <div class="order-checkbox-wrap">
+            <input
+              type="checkbox"
+              name="terms"
+              id="user-privacy"
+              class="order-checkbox visually-hidden"
+              value="true"
+              required
+            />
+            <label for="user-privacy" class="order-terms">
               <span class="order-checkbox-check">
                 <svg class="order-checkbox-check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check-mark"></use>
