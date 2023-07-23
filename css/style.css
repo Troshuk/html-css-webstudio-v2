@@ -591,9 +591,10 @@ input {
     margin-bottom: 24px;
 }
 
+.order-checkbox-check,
 .order-checkbox {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 
 .order-terms {
@@ -605,13 +606,11 @@ input {
 }
 
 .order-checkbox-check {
+    border-radius: 2px;
+    border: 1px solid rgba(var(--rgba-navyblue), 0.40);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
-    border: 1px solid rgba(var(--rgba-navyblue), 0.40);
     fill: transparent;
     margin-right: 8px;
     transition-duration: var(--transition-time);
