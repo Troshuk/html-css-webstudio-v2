@@ -532,6 +532,7 @@ input {
     font-size: 12px;
     letter-spacing: 0.04em;
     margin-bottom: 4px;
+    line-height: 1.17;
 }
 
 .order-input-wrapper {
@@ -581,6 +582,9 @@ input {
     resize: none;
     outline: transparent;
     color: rgba(var(--rgba-navyblue), 0.4);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    line-height: 1.17;
 }
 
 .order-checkbox-wrap {
