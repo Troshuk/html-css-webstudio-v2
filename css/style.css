@@ -754,7 +754,6 @@ input[type="checkbox"]:focus+label>span {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
 }
 
 .footer-info {
@@ -814,7 +813,9 @@ input[type="checkbox"]:focus+label>span {
 
 /* Subscribe form */
 
-.subscribe-container {}
+.subscribe-container {
+    margin-left: 80px;
+}
 
 .subscribe-title {
     margin-bottom: 16px;
