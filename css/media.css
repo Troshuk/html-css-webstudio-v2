@@ -1,0 +1,199 @@
+/** -------------------- Mobile -------------------- */
+
+
+@media screen and (min-width: 428px) {}
+
+
+/** -------------------- Tablet -------------------- */
+
+
+
+@media screen and (min-width: 768px) {
+    :root {
+        --container-width: var(--tablet-container-width);
+        --order-service-background-image: url(../images/studio/order/order-service-tablet.jpg);
+    }
+
+    /*? ------------------------ Order Service Section ------------------------ */
+
+    .order-service {
+        max-width: 768px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        :root {
+            --order-service-background-image: url(../images/studio/order/order-service-tablet-2x.jpg);
+        }
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        :root {
+            --order-service-background-image: url(../images/studio/order/order-service-tablet-3x.jpg);
+        }
+    }
+
+    .order-service-container {
+        gap: 36px;
+    }
+
+    .order-service-title {
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 1.07;
+        max-width: 496px;
+    }
+
+    /* ------------------------ Features Section ------------------------ */
+
+    .features-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
+    .features-item {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px) / 2);
+    }
+
+
+    .item-title {
+        text-align: start;
+    }
+
+    /* ------------------------ Our Team Section ------------------------ */
+
+    .team-member {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px) / 2);
+    }
+
+    /* ------------------------ Customers ------------------------ */
+
+    .customers-container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
+
+    .customers-items {
+        column-gap: 24px;
+    }
+
+    .customer-item {
+        width: calc((100% - 24px * 2) / 3);
+    }
+
+    .customer-icon {
+        width: initial;
+    }
+}
+
+
+
+/** -------------------- Desktop -------------------- */
+
+
+
+@media screen and (min-width: 1158px) {
+    :root {
+        --container-width: var(--desktop-container-width);
+        --order-service-background-image: url(../images/studio/order/order-service.jpg);
+    }
+
+
+    .section {
+        padding: 120px 0;
+    }
+
+    /*? ------------------------ Order Service Section ------------------------ */
+
+    .order-service {
+        padding: 188px 0;
+        max-width: 1440px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        :root {
+            --order-service-background-image: url(../images/studio/order/order-service-2x.jpg);
+        }
+    }
+
+    @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+        :root {
+            --order-service-background-image: url(../images/studio/order/order-service-3x.jpg);
+        }
+    }
+
+    .order-service-container {
+        gap: 48px;
+    }
+
+    /* ------------------------ Features Section ------------------------ */
+
+    .features {
+        padding-bottom: 0;
+    }
+
+    .features-item {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px * 3) / 4);
+    }
+
+    .feature-icon-container {
+        background-color: var(--cloud);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .item-title {
+        font-size: 20px;
+    }
+
+    /* ------------------------ Services Section ------------------------ */
+
+    .services {
+        display: block;
+    }
+
+    .services-container {}
+
+    .services-items {
+        display: flex;
+        gap: 24px;
+    }
+
+    .services-item {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px * 2) / 3);
+    }
+
+    /* ------------------------ Our Team Section ------------------------ */
+
+    .team-member {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px * 3) / 4);
+    }
+
+    /* ------------------------ Customers ------------------------ */
+
+    .customers-container {
+        padding-left: var(--container-side-padding);
+        padding-right: var(--container-side-padding);
+    }
+
+    .customer-item {
+        width: calc((100% - 24px * 5) / 6);
+    }
+}
