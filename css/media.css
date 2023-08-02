@@ -102,6 +102,7 @@
         color: var(--slate);
         font-size: 12px;
         letter-spacing: 0.04em;
+        display: block;
     }
 
     .header-menu-item,
@@ -147,7 +148,6 @@
 
     .order-service-title {
         font-size: 56px;
-        font-weight: 500;
         line-height: 1.07;
         max-width: 496px;
     }
@@ -173,8 +173,7 @@
     /*? ------------------------ Our Team Section ------------------------ */
 
     .team-container {
-        padding-left: 108px;
-        padding-right: 108px;
+        max-width: 582px;
     }
 
     .team-member {
@@ -185,8 +184,7 @@
     /*? ------------------------ Customers ------------------------ */
 
     .customers-container {
-        padding-left: 108px;
-        padding-right: 108px;
+        max-width: 582px;
     }
 
     .customers-items {
@@ -211,10 +209,9 @@
     /*? ------------------------ Footer ------------------------ */
 
     .footer-container {
-        padding-left: 108px;
-        padding-right: 108px;
         justify-content: start;
         column-gap: 24px;
+        max-width: 582px;
     }
 
     .footer .logo {
@@ -253,6 +250,10 @@
         justify-content: center;
     }
 
+    .filter-button {
+        padding: 12px 24px;
+    }
+
     .portfolio-items {
         row-gap: 72px;
     }
@@ -285,6 +286,10 @@
 
     .section {
         padding: 120px 0;
+    }
+
+    .container {
+        max-width: var(--container-width);
     }
 
     /*? ------------------------ Header ------------------------ */
@@ -350,8 +355,9 @@
         margin-bottom: 8px;
     }
 
-    .item-title {
+    .feature-item-title {
         font-size: 20px;
+        font-weight: 500;
     }
 
     /*? ------------------------ Services Section ------------------------ */
@@ -359,8 +365,6 @@
     .services {
         display: block;
     }
-
-    .services-container {}
 
     .services-items {
         display: flex;
@@ -374,22 +378,12 @@
 
     /*? ------------------------ Our Team Section ------------------------ */
 
-    .team-container {
-        padding-left: var(--container-side-padding);
-        padding-right: var(--container-side-padding);
-    }
-
     .team-member {
         /* (container_total_width / combined_gap_between_all_items) / all_items_count */
         width: calc((100% - 24px * 3) / 4);
     }
 
     /*? ------------------------ Customers ------------------------ */
-
-    .customers-container {
-        padding-left: var(--container-side-padding);
-        padding-right: var(--container-side-padding);
-    }
 
     .customer-item {
         width: calc((100% - 24px * 5) / 6);
@@ -403,8 +397,6 @@
     }
 
     .footer-container {
-        padding-left: var(--container-side-padding);
-        padding-right: var(--container-side-padding);
         column-gap: 0;
         flex-wrap: nowrap;
     }

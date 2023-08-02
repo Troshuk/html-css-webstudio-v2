@@ -114,7 +114,7 @@ input {
 
 .section-title {
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.11;
     color: var(--navyblue);
@@ -220,6 +220,7 @@ input {
         visibility 500ms var(--transition-function),
         transform 500ms var(--transition-function);
     transform: translateX(100%);
+    overflow: scroll;
 }
 
 .menu.is-open {
@@ -277,13 +278,13 @@ input {
     color: var(--ocean);
 }
 
-.menu-bottom-container {}
-
 .menu-address {
     margin-bottom: 48px;
 }
 
-.menu-address-items {}
+.menu-address-item:not(:last-child) {
+    margin-bottom: 40px;
+}
 
 .menu-address-email {
     color: var(--slate);
@@ -302,7 +303,6 @@ input {
     line-height: 1.12;
     letter-spacing: 0.02em;
     display: block;
-    margin-bottom: 40px;
 }
 
 .menu-item,
@@ -365,7 +365,7 @@ input {
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     :root {
-        --order-service-background-image: url(../images/studio/order/order-service-2x.jpg);
+        --order-service-background-image: url(../images/studio/order/order-service-mobile-2x.jpg);
     }
 }
 
@@ -373,7 +373,7 @@ input {
 (min-resolution: 288dpi),
 (min-resolution: 3dppx) {
     :root {
-        --order-service-background-image: url(../images/studio/order/order-service-3x.jpg);
+        --order-service-background-image: url(../images/studio/order/order-service-mobile-3x.jpg);
     }
 }
 
@@ -389,7 +389,7 @@ input {
     text-align: center;
     letter-spacing: 0.02em;
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.12;
     text-transform: capitalize;
     max-width: 320px;
@@ -415,24 +415,18 @@ input {
 
 /* ------------------------ Features Section ------------------------ */
 
-.features {}
-
-.features-container {}
-
 .features-items {
     display: flex;
     flex-direction: column;
     gap: 72px;
 }
 
-.features-item {}
-
 .feature-icon-container {
     display: none;
 }
 
 .feature-item-title {
-    font-weight: 500;
+    font-weight: 700;
     color: var(--navyblue);
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -454,8 +448,6 @@ input {
 .team {
     background-color: var(--cloud);
 }
-
-.team-container {}
 
 .team-items {
     display: flex;
@@ -522,12 +514,6 @@ input {
 }
 
 /* ------------------------ Customers ------------------------ */
-
-.customers {}
-
-.customers-container {}
-
-.customers-title {}
 
 .customers-items {
     display: flex;
@@ -793,12 +779,12 @@ input[type="checkbox"]:focus+label>span {
     color: var(--iris);
     font-weight: 500;
     border: 1px solid var(--cornflower);
-    padding: 12px 24px;
     border-radius: 4px;
     letter-spacing: 0.04em;
     transition-property: color, background-color, border-color, box-shadow;
     transition-duration: var(--transition-time);
     transition-timing-function: var(--transition-function);
+    padding: 8px 16px;
 }
 
 .filter-button:is(:hover, :focus) {
@@ -820,6 +806,7 @@ input[type="checkbox"]:focus+label>span {
 .portfolio-link {
     transition: box-shadow var(--transition-time) var(--transition-function);
     display: block;
+    color: var(--slate);
 }
 
 .portfolio-link:is(:hover, :focus) {
@@ -855,10 +842,6 @@ input[type="checkbox"]:focus+label>span {
     padding: 32px 16px;
     border: 1px solid var(--cornflower);
     border-top: none;
-}
-
-.portfolio .item-description {
-    color: var(--slate);
 }
 
 .portfolio-item-title {
@@ -901,12 +884,10 @@ input[type="checkbox"]:focus+label>span {
     max-width: 268px;
 }
 
-.footer-socials-container {}
-
 .footer-socials-title {
     margin-bottom: 16px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--white);
     text-align: center;
 }
@@ -948,7 +929,7 @@ input[type="checkbox"]:focus+label>span {
 
 .subscribe-title {
     margin-bottom: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--white);
     text-align: center;
 }
@@ -958,8 +939,6 @@ input[type="checkbox"]:focus+label>span {
     gap: 16px 24px;
     flex-direction: column;
 }
-
-.subscribe-email-label {}
 
 .subscribe-email-input {
     border-radius: 4px;
@@ -996,7 +975,7 @@ input[type="checkbox"]:focus+label>span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.04em;
     color: var(--white);
     background-color: var(--iris);
