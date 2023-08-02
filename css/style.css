@@ -560,13 +560,14 @@ input {
     transition:
         opacity var(--transition-time) var(--transition-function),
         visibility var(--transition-time) var(--transition-function);
+    overflow: scroll;
 }
 
 .modal {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 80px;
+    transform: translate(-50%);
     min-height: 584px;
     border-radius: 4px;
     background: var(--dairy);
@@ -574,14 +575,14 @@ input {
         0px 2px 1px 0px rgba(var(--rgba-black), 0.20),
         0px 1px 3px 0px rgba(var(--rgba-black), 0.12),
         0px 1px 1px 0px rgba(var(--rgba-black), 0.14);
-    transition: transform var(--transition-time) var(--transition-function);
+    transition: left var(--transition-time) var(--transition-function);
     width: 392px;
     padding: 72px 16px 24px;
     max-width: 95%;
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scaleX(0);
+    left: -100%;
 }
 
 .modal-close-button {
