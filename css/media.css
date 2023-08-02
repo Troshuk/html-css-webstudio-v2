@@ -1,7 +1,16 @@
 /** -------------------- Mobile -------------------- */
 
 
-@media screen and (min-width: 428px) {}
+@media screen and (min-width: 428px) {
+    .menu-socials {
+        gap: 56px;
+        justify-content: start;
+    }
+
+    .menu-address-phone {
+        font-size: 36px;
+    }
+}
 
 
 /** -------------------- Tablet -------------------- */
@@ -12,6 +21,102 @@
     :root {
         --container-width: var(--tablet-container-width);
         --order-service-background-image: url(../images/studio/order/order-service-tablet.jpg);
+    }
+
+    /*? ------------------------ Header ------------------------ */
+
+    .header {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .header-container {
+        gap: 122px;
+    }
+
+    .header-menu {
+        gap: 120px;
+        justify-content: start;
+    }
+
+    /* Header Menu */
+    .header-menu-items {
+        display: flex;
+        gap: 40px;
+    }
+
+    .header-menu-item {
+        color: var(--navyblue);
+        font-weight: 500;
+        padding: 24px 0;
+        display: block;
+        position: relative;
+    }
+
+    .header-menu-item::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 0;
+        height: 4px;
+        background-color: var(--ocean);
+        border-radius: 2px;
+        opacity: 0;
+        transition:
+            width var(--transition-time) var(--transition-function),
+            left var(--transition-time) var(--transition-function),
+            opacity var(--transition-time) var(--transition-function);
+    }
+
+    .header-menu-item:not(.current-page):is(:hover, :focus)::after {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+    }
+
+    .header-menu-item.current-page {
+        color: var(--ocean);
+    }
+
+    .header-menu-item.current-page::after {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+
+    /* Address */
+    .header-address {
+        font-style: normal;
+        display: inline-block;
+    }
+
+    .header-address-items {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .header-address-item {
+        color: var(--slate);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+    }
+
+    .header-menu-item,
+    .header-address-item {
+        transition: color var(--transition-time) var(--transition-function);
+    }
+
+    .header-menu-item:not(.current-page):is(:hover, :focus),
+    .header-address-item:is(:hover, :focus) {
+        color: var(--ocean);
+    }
+
+    /* Menu */
+    .menu-open-button {
+        display: none;
     }
 
     /*? ------------------------ Order Service Section ------------------------ */
@@ -47,7 +152,7 @@
         max-width: 496px;
     }
 
-    /* ------------------------ Features Section ------------------------ */
+    /*? ------------------------ Features Section ------------------------ */
 
     .features-items {
         flex-direction: row;
@@ -61,18 +166,23 @@
     }
 
 
-    .item-title {
+    .feature-item-title {
         text-align: start;
     }
 
-    /* ------------------------ Our Team Section ------------------------ */
+    /*? ------------------------ Our Team Section ------------------------ */
+
+    .team-container {
+        padding-left: 108px;
+        padding-right: 108px;
+    }
 
     .team-member {
         /* (container_total_width / combined_gap_between_all_items) / all_items_count */
         width: calc((100% - 24px) / 2);
     }
 
-    /* ------------------------ Customers ------------------------ */
+    /*? ------------------------ Customers ------------------------ */
 
     .customers-container {
         padding-left: 108px;
@@ -90,6 +200,75 @@
     .customer-icon {
         width: initial;
     }
+
+    /*? -------------------- Modal -------------------- */
+
+    .modal {
+        width: 408px;
+        padding: 72px 24px 24px;
+    }
+
+    /*? ------------------------ Footer ------------------------ */
+
+    .footer-container {
+        padding-left: 108px;
+        padding-right: 108px;
+        justify-content: start;
+        column-gap: 24px;
+    }
+
+    .footer .logo {
+        text-align: start;
+    }
+
+    .footer-description {
+        width: 264px;
+    }
+
+    .footer-socials-title {
+        text-align: start;
+    }
+
+    .subscribe-title {
+        text-align: start;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+    }
+
+    .subscribe-email-input {
+        width: 264px;
+    }
+
+    /* !------------------------ Protfolio Page ------------------------ */
+
+    .portfolio {
+        padding-top: 64px;
+        padding-bottom: 96px;
+    }
+
+    .portfolio-buttons {
+        margin-bottom: 64px;
+        justify-content: center;
+    }
+
+    .portfolio-items {
+        row-gap: 72px;
+    }
+
+    .portfolio-item {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px) / 2);
+    }
+
+    .portfolio-item-cover-text {
+        padding: 40px 32px;
+    }
+
+    .portfolio-image-container {
+        max-height: 300px;
+    }
 }
 
 
@@ -104,9 +283,23 @@
         --order-service-background-image: url(../images/studio/order/order-service.jpg);
     }
 
-
     .section {
         padding: 120px 0;
+    }
+
+    /*? ------------------------ Header ------------------------ */
+
+    .header-menu {
+        gap: 76px;
+    }
+
+    .header-address-items {
+        gap: 40px;
+    }
+
+    .header-address-item {
+        font-size: 16px;
+        letter-spacing: 0.02em;
     }
 
     /*? ------------------------ Order Service Section ------------------------ */
@@ -136,7 +329,7 @@
         gap: 48px;
     }
 
-    /* ------------------------ Features Section ------------------------ */
+    /*? ------------------------ Features Section ------------------------ */
 
     .features {
         padding-bottom: 0;
@@ -161,7 +354,7 @@
         font-size: 20px;
     }
 
-    /* ------------------------ Services Section ------------------------ */
+    /*? ------------------------ Services Section ------------------------ */
 
     .services {
         display: block;
@@ -179,14 +372,19 @@
         width: calc((100% - 24px * 2) / 3);
     }
 
-    /* ------------------------ Our Team Section ------------------------ */
+    /*? ------------------------ Our Team Section ------------------------ */
+
+    .team-container {
+        padding-left: var(--container-side-padding);
+        padding-right: var(--container-side-padding);
+    }
 
     .team-member {
         /* (container_total_width / combined_gap_between_all_items) / all_items_count */
         width: calc((100% - 24px * 3) / 4);
     }
 
-    /* ------------------------ Customers ------------------------ */
+    /*? ------------------------ Customers ------------------------ */
 
     .customers-container {
         padding-left: var(--container-side-padding);
@@ -195,5 +393,49 @@
 
     .customer-item {
         width: calc((100% - 24px * 5) / 6);
+    }
+
+    /*? ------------------------ Footer ------------------------ */
+
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer-container {
+        padding-left: var(--container-side-padding);
+        padding-right: var(--container-side-padding);
+        column-gap: 0;
+        flex-wrap: nowrap;
+    }
+
+    .footer-info {
+        margin-right: 120px;
+    }
+
+    /* Subscribe form */
+
+    .subscribe-container {
+        margin-left: 80px;
+    }
+
+    /* !------------------------ Protfolio Page ------------------------ */
+
+    .portfolio {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .portfolio-buttons {
+        margin-bottom: 72px;
+    }
+
+    .portfolio-items {
+        row-gap: 48px;
+    }
+
+    .portfolio-item {
+        /* (container_total_width / combined_gap_between_all_items) / all_items_count */
+        width: calc((100% - 24px * 2) / 3);
     }
 }
