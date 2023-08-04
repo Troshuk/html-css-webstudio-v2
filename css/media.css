@@ -289,7 +289,7 @@
     }
 
     .container {
-        max-width: var(--container-width);
+        max-width: var(--container-max-width);
     }
 
     /*? ------------------------ Header ------------------------ */
