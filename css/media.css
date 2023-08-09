@@ -20,7 +20,9 @@
 @media screen and (min-width: 768px) {
     :root {
         --container-width: var(--tablet-container-width);
-        --order-service-background-image: url(../images/studio/order/order-service-tablet.jpg);
+        --order-service-background-image-1x: url(../images/studio/order/order-service-tablet.jpg);
+        --order-service-background-image-2x: url(../images/studio/order/order-service-tablet-2x.jpg);
+        --order-service-background-image-3x: url(../images/studio/order/order-service-tablet-3x.jpg);
     }
 
     /*? ------------------------ Header ------------------------ */
@@ -124,22 +126,6 @@
 
     .order-service {
         max-width: 768px;
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        :root {
-            --order-service-background-image: url(../images/studio/order/order-service-tablet-2x.jpg);
-        }
-    }
-
-    @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-        :root {
-            --order-service-background-image: url(../images/studio/order/order-service-tablet-3x.jpg);
-        }
     }
 
     .order-service-container {
@@ -281,7 +267,9 @@
 @media screen and (min-width: 1158px) {
     :root {
         --container-width: var(--desktop-container-width);
-        --order-service-background-image: url(../images/studio/order/order-service.jpg);
+        --order-service-background-image-1x: url(../images/studio/order/order-service.jpg);
+        --order-service-background-image-2x: url(../images/studio/order/order-service-2x.jpg);
+        --order-service-background-image-3x: url(../images/studio/order/order-service-3x.jpg);
     }
 
     .section {
@@ -312,22 +300,6 @@
     .order-service {
         padding: 188px 0;
         max-width: 1440px;
-    }
-
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        :root {
-            --order-service-background-image: url(../images/studio/order/order-service-2x.jpg);
-        }
-    }
-
-    @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-        :root {
-            --order-service-background-image: url(../images/studio/order/order-service-3x.jpg);
-        }
     }
 
     .order-service-container {
