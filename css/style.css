@@ -34,7 +34,10 @@
     --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Background Images */
-    --order-service-background-image: url(../images/studio/order/order-service-mobile.jpg);
+    --order-service-background-image-1x: url(../images/studio/order/order-service-mobile.jpg);
+    --order-service-background-image-2x: url(../images/studio/order/order-service-mobile-2x.jpg);
+    --order-service-background-image-3x: url(../images/studio/order/order-service-mobile-3x.jpg);
+    --order-service-background-image: var(--order-service-background-image-1x);
 }
 
 /* Body */
@@ -365,7 +368,7 @@ input {
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     :root {
-        --order-service-background-image: url(../images/studio/order/order-service-mobile-2x.jpg);
+        --order-service-background-image: var(--order-service-background-image-2x);
     }
 }
 
@@ -373,7 +376,7 @@ input {
 (min-resolution: 288dpi),
 (min-resolution: 3dppx) {
     :root {
-        --order-service-background-image: url(../images/studio/order/order-service-mobile-3x.jpg);
+        --order-service-background-image: var(--order-service-background-image-3x);
     }
 }
 
