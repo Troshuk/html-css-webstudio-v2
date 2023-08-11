@@ -105,6 +105,7 @@
         font-size: 12px;
         letter-spacing: 0.04em;
         display: block;
+        line-height: 1.17;
     }
 
     .header-menu-item,
